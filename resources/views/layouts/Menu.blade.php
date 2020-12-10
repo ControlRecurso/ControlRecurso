@@ -73,7 +73,6 @@
                          data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a href="" class="nav-link"><strong>Listado de Prestados</strong></a>
-                            <a href="" class="nav-link">Agregar Recurso</a>
                             <a href="" class="nav-link">Agregar Prestamo</a>
 
                         </nav>
