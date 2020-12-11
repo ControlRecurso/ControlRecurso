@@ -72,8 +72,8 @@
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                          data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a href="" class="nav-link"><strong>Listado de Prestados</strong></a>
-                            <a href="" class="nav-link">Agregar Prestamo</a>
+                            <a href="{{route("index.historial")}}" class="nav-link">Listado de Prestados</a>
+                            <a href="{{route("recursos.index")}}" class="nav-link">Listado de recursos</a>
 
                         </nav>
                     </div>
@@ -136,7 +136,53 @@
 <script src="{{asset("js/jsmenu/font-awesome.js")}}" crossorigin="anonymous"></script>
 
 <script>
+    $('#eliminarRecurso').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var id = button.data('id');
+        var modal = $(this);
+        modal.find('.modal-footer #id_recurso').val(id);
+    });
+    $('#editarRecursoModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var id = button.data('id');
+        var nombre=button.data("nombre");
+        var cantidad = button.data("cantidad");
 
+        var modal = $(this);
+        modal.find('.modal-footer #id_recurso').val(id);
+        modal.find('.modal-body #nombre').val(nombre);
+        modal.find('.modal-body #cantidad').val(cantidad);
+
+    });
+
+
+    $('#eliminarHistorial').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var id = button.data('id');
+        var modal = $(this);
+        modal.find('.modal-footer #id_historial').val(id);
+    });
+
+
+    $('#editarHistorialModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var id = button.data('id');
+        var nombre=button.data("nombre");
+        var cantidad = button.data("cantidad");
+        var numero_cuenta =button.data('numero_cuenta');
+        var fecha = button.data("fecha");
+        var id_recurso = button.data("recurso_id");
+
+
+        var modal = $(this);
+        modal.find('.modal-footer #id_historial').val(id);
+        modal.find('.modal-body #nombre').val(nombre);
+        modal.find('.modal-body #cantidad').val(cantidad);
+        modal.find('.modal-body #numero_cuenta').val(numero_cuenta);
+        modal.find('.modal-body #fecha').val(fecha);
+        modal.find('.modal-body #selectRecurso').val(id_recurso);
+
+    })
 </script>
 <script>
     $(document).ready(function () {
