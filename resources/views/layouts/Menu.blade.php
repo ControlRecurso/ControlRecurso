@@ -57,12 +57,7 @@
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
-                    <div class="sb-sidenav-menu-heading">Inicio</div>
-                    <a class="nav-link" href="/">
-                        <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                        Inicio
-                    </a>
-                    <div class="sb-sidenav-menu-heading">Administración General</div>
+
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
                        aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-building"></i></div>
